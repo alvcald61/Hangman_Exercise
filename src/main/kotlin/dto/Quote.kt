@@ -1,4 +1,5 @@
-import java.util.Locale.Category
+package dto
+
 
 data class Quote(
     val quote: String,

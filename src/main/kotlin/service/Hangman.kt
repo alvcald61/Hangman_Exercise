@@ -1,9 +1,13 @@
+package service
+
+import Exception.RepeatedCharacterException
+import dto.Quote
 import com.google.gson.Gson
 import okhttp3.OkHttpClient
 import okhttp3.Request
 import okhttp3.Response
 
-class Ahorcado() {
+class Hangman() {
     private lateinit var quote : Quote
     private lateinit var unrevealedQuote : CharArray
     private val characters : MutableSet<Char> = mutableSetOf()
@@ -89,7 +93,7 @@ class Ahorcado() {
         var revealedCharacters: Int
         var character: Char
         initRandomQuote(category)
-        println("Welcome to Hangman! You have $maxAttempts attempts to guess the quote. Good luck!")
+        println("Welcome to service.Hangman! You have $maxAttempts attempts to guess the quote. Good luck!")
 //        printHuman()
         while(attempts < maxAttempts && !won){
             try {
